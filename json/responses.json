@@ -1,0 +1,6 @@
+{
+  "startup": "Bot has started",
+  "cmds": {
+    "ping": "pong"
+  }
+}

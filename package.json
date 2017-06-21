@@ -1,0 +1,30 @@
+{
+  "name": "failstackbot",
+  "version": "1.0.0",
+  "description": "A discord bot that is supposed to pull information from the internet.",
+  "main": "index.js",
+  "keywords": [
+    "eurostat",
+    "currency"
+  ],
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/staryg/faistackBot.git"
+  },
+  "author": "Mikael Kemstedt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/staryg/faistackBot/issues"
+  },
+  "homepage": "https://github.com/staryg/faistackBot#readme",
+  "dependencies": {
+    "bufferutil": "^3.0.0",
+    "discord.js": "^11.1.0",
+    "libsodium-wrappers": "^0.5.1",
+    "opusscript": "0.0.3",
+    "uws": "^0.14.5"
+  }
+}
