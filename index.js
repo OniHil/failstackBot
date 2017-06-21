@@ -8,7 +8,9 @@ const commands = require('./functions/commands.js');
 
 client.on('ready', () => {
 	console.log(resp.startup);
-	commands.commandsJS();
+});
+client.on('message', message => {
+	commands.commandsJS(message);
 });
 
 client.login(token);
