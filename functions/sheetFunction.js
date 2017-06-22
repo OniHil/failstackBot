@@ -4,12 +4,14 @@ const readline = require('readline');
 const google = require('googleapis');
 const googleAuth = require('google-auth-library');
 
+const config = require('../json/config.json');
+
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/sheets.googleapis.com-nodejs-quickstart.json
-var SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly'];
+var SCOPES = ['https://www.googleapis.com/auth/spreadsheets'];
 var TOKEN_DIR = (process.env.HOME || process.env.HOMEPATH ||
 	process.env.USERPROFILE) + '/.credentials/';
-var TOKEN_PATH = TOKEN_DIR + 'sheets.googleapis.com-nodejs-quickstart.json';
+var TOKEN_PATH = TOKEN_DIR + 'sheets.googleapis.com-failstackBot.json';
 
 // Load client secrets from a local file.
 fs.readFile('client_secret.json', function processClientSecrets(err, content) {
@@ -97,30 +99,32 @@ function storeToken(token) {
 }
 
 /**
- * Print the names and majors of students in a sample spreadsheet:
- * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
+ * Returns the data that is requested, aka failstack, cost, % chance of success and more
  */
 function listMajors(auth) {
 	var sheets = google.sheets('v4');
 	sheets.spreadsheets.values.get({
 		auth: auth,
-		spreadsheetId: '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms',
-		range: 'Class Data!A2:E',
+		spreadsheetId: config.sheet.id,
+		range: 'Enhancement Guideline!A1:B20',
 	}, function (err, response) {
 		if (err) {
-			console.log('The API returned an error: ' + err);
+			var answer = 'The API returned an error: ' + err;
 			return;
 		}
 		var rows = response.values;
 		if (rows.length == 0) {
-			console.log('No data found.');
+			var answer = 'No data found.';
 		} else {
-			console.log('Name, Major:');
 			for (var i = 0; i < rows.length; i++) {
 				var row = rows[i];
 				// Print columns A and E, which correspond to indices 0 and 4.
-				console.log('%s, %s', row[0], row[4]);
+				var answer = ('Test goodly %s, %s', row[1]);
 			}
 		}
 	});
+}
+
+module.exports = {
+	listMajors: listMajors,
 }
