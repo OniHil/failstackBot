@@ -104,13 +104,16 @@ function storeToken(token) {
 function listMajors(auth) {
 	debugger;
 	var sheets = google.sheets('v4');
-	sheets.spreadsheets.values.get({
+	sheets.spreadsheets.values.batchGet({
 		auth: auth,
 		spreadsheetId: config.sheet.id,
-		range: 'Enhancement Guideline!A1:B20',
+		ranges: [config.sheet.ranges],
+		majorDimension: config.sheet.majorDimension
 	}, function (err, response) {
+		debugger;
 		if (err) {
-			var answer = 'The API returned an error: ' + err;
+			debugger;
+			console.log('The API returned an error: ' + err);
 			return;
 		}
 		debugger;

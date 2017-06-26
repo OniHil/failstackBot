@@ -1,9 +1,13 @@
 {
-    "id": "asd"
-    "token": "",
-	"sheet": {
-	},
-	"discord": {
-		"prefix": "#"
-	}
+  "sheet": {
+    "ranges": [
+      "Enhancement Guideline!A9:P9",
+      "Enhancement Guideline!A14:P338",
+      "Enhancement Guideline!A345:P356"
+    ],
+    "majorDimension": "ROWS"
+  },
+  "discord": {
+    "prefix": "#"
+  }
 }

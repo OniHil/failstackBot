@@ -1,4 +1,5 @@
 'use strict';
+const fs = require('fs');
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
@@ -16,18 +17,20 @@ function commandsJS(message) {
 		message.channel.send(resp.ping);
 
 	} else if (message.content.startsWith(prefix + 'fs')) {
-		debugger;
 		let args = message.content.split(' ').slice(1);
 		let itemName = args[0];
-		var itemNameRow = 0;
 
-		sheetFunction.listMajors(function () {
-			debugger;
-			fs.readFile('/json/sheetData.json', (err, data) => {
-				if (err) throw err;
-				message.reply(data);
+		debugger;
+		message.reply(fs.readFileSync('./json/sheetData.json').toString());
+
+		Array.prototype.myFind = function (obj) {
+			return this.filter(function (item) {
+				for (var prop in obj)
+					if (!(prop in item) || obj[prop] !== item[prop])
+						return false;
+				return true;
 			});
-		});
+		};
 	}
 }
 

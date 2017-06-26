@@ -8,11 +8,11 @@
     "currency"
   ],
   "scripts": {
-    "test": "make test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/staryg/faistackBot.git"
+    "url": "git+https://github.com/staryg/upgraded-enigma.git"
   },
   "author": "Mikael Kemstedt",
   "license": "MIT",

@@ -1,77 +1,135 @@
 {
-	"range": "'Enhancement Guideline'!A1:B20",
-	"majorDimension": "ROWS",
-	"values": [
-		[
-			"Q: How is the new patch going to affect the numbers below? A: Probably not much, PRI+ and Blue+ is completely unaffected anyway and suggested failstacks for green items were very low in the first place. There will be no update tho, since i have no idea what the numbers are (for either of the 2 new enhance modes)"
-		],
-		[
-			"If the suggested failstack numbers here are not to your liking check out Enhancement (Full), it contains a complete breakdown of costs for ALL failstacks for every grade (huge)"
-		],
-		[
-			" http://forum.blackdesertonline.com/index.php?/topic/115179-enhancement-failstack-costsstrategies/"
-		],
-		[
-			"If anyone is interested in the tool i programmed, its available for download on the BDO forum (see link above). Last update unless prices change drastically. The difference for suggested failstacks is usually not that big anyway"
-		],
-		[
-			"See tab Cron Cost for thresholds and https://docs.google.com/spreadsheets/d/1WzAeIFslcWhZ-TudUTrvt4S6ejGF8Uo5FwVqNivfHK0/pubhtml for the published(faster?) document"
-		],
-		[
-			"I removed some jewelry items to reduce clutter. See the generic priced items (for prices inbetween take failstacks inbetween)"
-		],
-		[
-			"Values for Rods, Muskets and Horse Gear is based on the assumption that it uses the same values as Armor (past +5) with numbers for forcing adjusted (which seem to have been stealth adjusted, when i find the time i will update)"
-		],
-		[
-			"The displyed cost and number of fails assume that you continue trying until the item goes up, the additional failstacks generated in the process are already part of the calculation"
-		],
-		[
-			"ITEM_NAME",
-			"GRADE"
-		],
-		[
-			"Armor Stone"
-		],
-		[
-			"Artisan Rod",
-			"Base"
-		],
-		[
-			"Artisan Rod",
-			"+1"
-		],
-		[
-			"Artisan Rod",
-			"+2"
-		],
-		[
-			"Artisan Rod",
-			"+3"
-		],
-		[
-			"Artisan Rod",
-			"+4"
-		],
-		[
-			"Artisan Rod",
-			"+5"
-		],
-		[
-			"Artisan Rod",
-			"+6"
-		],
-		[
-			"Artisan Rod",
-			"+7"
-		],
-		[
-			"Artisan Rod",
-			"+8"
-		],
-		[
-			"Artisan Rod",
-			"+9"
-		]
-	]
+  "range": "'Enhancement Guideline'!A11:D356",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      "Artisan Rod",
+      "Base",
+      "1,000,000"
+    ],
+    [
+      "Artisan Rod",
+      "+1",
+      "",
+      "2,400,000"
+    ],
+    [
+      "Artisan Rod",
+      "+2",
+      "",
+      "4,500,000"
+    ],
+    [
+      "Artisan Rod",
+      "+3",
+      "",
+      "7,086,011"
+    ],
+    [
+      "Artisan Rod",
+      "+4",
+      "",
+      "9,924,302"
+    ],
+    [
+      "Artisan Rod",
+      "+5",
+      "",
+      "13,254,321"
+    ],
+    [
+      "Artisan Rod",
+      "+6",
+      "",
+      "17,025,900"
+    ],
+    [
+      "Artisan Rod",
+      "+7",
+      "",
+      "21,402,489"
+    ],
+    [
+      "Artisan Rod",
+      "+8",
+      "",
+      "34,337,784"
+    ],
+    [
+      "Artisan Rod",
+      "+9",
+      "",
+      "59,337,784"
+    ],
+    [
+      "Artisan Rod",
+      "+10",
+      "",
+      "93,337,784"
+    ],
+    [
+      "Bares Neck",
+      "Base",
+      "50,000"
+    ],
+    [
+      "Bares Neck",
+      "PRI",
+      "180,000",
+      "312,800"
+    ],
+    [
+      "Bares Neck",
+      "DUO",
+      "650,000",
+      "1,574,350"
+    ],
+    [
+      "Bares Neck",
+      "TRI",
+      "2,000,000",
+      "15,083,579"
+    ],
+    [
+      "Bares Neck",
+      "TET",
+      "4,500,000",
+      "157,810,904"
+    ],
+    [
+      "Bares Neck",
+      "PEN",
+      "",
+      "1,583,563,871"
+    ],
+    [
+      "Basilisks",
+      "Base",
+      "48,000,000"
+    ],
+    [
+      "Basilisks",
+      "PRI",
+      "",
+      "192,940,905"
+    ],
+    [
+      "Basilisks",
+      "DUO",
+      "",
+      "702,746,066"
+    ],
+    [
+      "Basilisks",
+      "TRI",
+      "",
+      "2,847,068,101"
+    ],
+    [
+      "Basilisks",
+      "TET",
+      "",
+      "13,031,328,077"
+    ]
+  ]
 }
