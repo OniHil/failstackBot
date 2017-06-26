@@ -102,6 +102,7 @@ function storeToken(token) {
  * Returns the data that is requested, aka failstack, cost, % chance of success and more
  */
 function listMajors(auth) {
+	debugger;
 	var sheets = google.sheets('v4');
 	sheets.spreadsheets.values.get({
 		auth: auth,
@@ -112,15 +113,17 @@ function listMajors(auth) {
 			var answer = 'The API returned an error: ' + err;
 			return;
 		}
+		debugger;
 		var rows = response.values;
 		if (rows.length == 0) {
-			var answer = 'No data found.';
+			console.log('No Data found')
 		} else {
-			for (var i = 0; i < rows.length; i++) {
-				var row = rows[i];
-				// Print columns A and E, which correspond to indices 0 and 4.
-				var answer = ('Test goodly %s, %s', row[1]);
-			}
+			debugger;
+			var sheetData = JSON.stringify(response, null, ' ');
+			fs.writeFile('./json/sheetData.json', sheetData, (err) => {
+				if (err) throw err;
+				console.log('Data saved.');
+			});
 		}
 	});
 }

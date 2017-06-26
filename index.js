@@ -8,9 +8,11 @@ const config = require('./json/config.json');
 const token = require('./json/config.json').discord.token;
 
 client.on('ready', () => {
+	debugger;
 	console.log(resp.startup);
 });
 client.on('message', message => {
+	debugger;
 	commands.commandsJS(message);
 });
 
