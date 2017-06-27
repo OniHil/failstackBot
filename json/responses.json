@@ -1,6 +1,13 @@
 {
-	"startup": "Bot has started",
-	"cmds": {
-		"ping": "pong"
-	}
+  "startup": "Bot has started",
+  "cmds": {
+    "ping": "pong",
+    "fs": [
+      "For ",
+      ", you want to start at ",
+      " failstacks. On average it's going to cost ",
+      " silver and you need ",
+      ""
+    ]
+  }
 }

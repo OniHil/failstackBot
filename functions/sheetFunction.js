@@ -102,13 +102,15 @@ function storeToken(token) {
  * Returns the data that is requested, aka failstack, cost, % chance of success and more
  */
 function listMajors(auth) {
+	var sheetRanges = JSON.stringify(config.sheet.ranges, null);
+	var sheetRanges = sheetRanges.slice(1, -1);
 	debugger;
 	var sheets = google.sheets('v4');
-	sheets.spreadsheets.values.batchGet({
+	sheets.spreadsheets.values.get({
 		auth: auth,
+		range: sheetRanges,
 		spreadsheetId: config.sheet.id,
-		ranges: [config.sheet.ranges],
-		majorDimension: config.sheet.majorDimension
+		majorDimension: config.sheet.majorDimension,
 	}, function (err, response) {
 		debugger;
 		if (err) {
