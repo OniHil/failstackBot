@@ -18,30 +18,36 @@ function commandsJS(message) {
 		message.channel.send(resp.ping);
 
 	} else if (message.content.startsWith(prefix + 'fs')) {
-		let args = message.content.split(' ').slice(1);
-		// E = Enhance, R = repair
-		let itemName = args[0];
-		let enhanceWanted = args[1];
+		itemInfo();
+	}
+}
 
-		debugger;
-		var sheetDataFilled = sheetData.values[0];
-		var a = sheetDataFilled.indexOf(itemName, 405);
-		if (a === -1) {
-			message.reply('Command not formatted correctly.')
-				.then(msg => console.log())
-				.catch(console.error);
-		} else {
-			var r = resp.fs[0];
-			var r2 = resp.fs[1];
-			var r3 = resp.fs[2];
-			var r4 = resp.fs[3];
-			var r5 = resp.fs[4];
-			var d = sheetDataFilled[a];
+function itemInfo() {
+	let args = message.content.split(' ').slice(1);
+	// E = Enhance, R = repair
+	let itemName = args[0];
+	let enhanceWanted = args[1];
 
-			message.reply(r + r2 + r3 + r4 + r5 + d)
-				.then(msg => console.log(`${message}`))
-				.catch(console.error);
-		}
+	debugger;
+	var sheetDataFilled = sheetData.values[[0]];
+	var sheetItemName = sheetDataFilled.indexOf(itemName);
+	if (sheetItemName === -1) {
+		message.reply('Command not formatted correctly.')
+			.then(msg => console.log())
+			.catch(console.error);
+	} else {
+		var
+		var r = resp.fs[0];
+		var r2 = resp.fs[1];
+		var r3 = resp.fs[2];
+		var r4 = resp.fs[3];
+		var r5 = resp.fs[4];
+		var sheetFailstack = sheetDataFilled.indexOf[enhanceWanted];
+
+
+		message.reply(r + sheetFailstack + ' ' + sheetItemName + r2 + r3 + r4 + r5 + d)
+			.then(msg => console.log(`${msg}`))
+			.catch(console.error);
 	}
 }
 

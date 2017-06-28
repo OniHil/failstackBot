@@ -3,7 +3,7 @@
   "cmds": {
     "ping": "pong",
     "fs": [
-      "For ",
+      "For a ",
       ", you want to start at ",
       " failstacks. On average it's going to cost ",
       " silver and you need ",
