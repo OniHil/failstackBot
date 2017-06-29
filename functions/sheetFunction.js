@@ -124,7 +124,8 @@ function listMajors(auth) {
 			console.log('No Data found')
 		} else {
 			debugger;
-			var sheetData = JSON.stringify(response, null, ' ');
+			var a = JSON.stringify(response, null, ' ');
+			var sheetData = a.toLowerCase();
 			fs.writeFile('./json/sheetData.json', sheetData, (err) => {
 				if (err) throw err;
 				console.log('Data saved.');

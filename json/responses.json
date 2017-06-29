@@ -9,5 +9,9 @@
       " silver and you need ",
       ""
     ]
+  },
+  "help": {
+    "ping": "pong",
+    "fs": "Shows how many failstacks you want for next enhance, how much it's going to cost, and more."
   }
 }
