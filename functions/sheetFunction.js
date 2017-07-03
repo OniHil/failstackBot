@@ -103,12 +103,12 @@ function storeToken(token) {
  */
 function listMajors(auth) {
 	var sheetRanges = JSON.stringify(config.sheet.ranges, null);
-	var sheetRanges = sheetRanges.slice(1, -1);
+	var sheetRange = sheetRanges.slice(1, -1);
 	debugger;
 	var sheets = google.sheets('v4');
 	sheets.spreadsheets.values.get({
 		auth: auth,
-		range: sheetRanges,
+		range: sheetRange,
 		spreadsheetId: config.sheet.id,
 		majorDimension: config.sheet.majorDimension,
 	}, function (err, response) {
@@ -121,7 +121,7 @@ function listMajors(auth) {
 		debugger;
 		var rows = response.values;
 		if (rows.length == 0) {
-			console.log('No Data found')
+			console.log('No Data found');
 		} else {
 			debugger;
 			var a = JSON.stringify(response, null, ' ');
@@ -136,4 +136,4 @@ function listMajors(auth) {
 
 module.exports = {
 	listMajors: listMajors,
-}
+};

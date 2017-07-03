@@ -10,7 +10,7 @@ module.exports = message => {
 	try {
 		let cmdFile = require(`../commands/${command}`);
 		cmdFile.run(client, message, args);
-	}.catch(err) {
+	} catch (err) {
 		console.log(`Command ${command} failed\n${err.stack}`);
 	}
-}
+};

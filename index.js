@@ -1,25 +1,26 @@
+/* jslint node: true */
 'use strict';
-const Discord = require('discord.js');
-const client = new Discord.Client();
+var Discord = require('discord.js');
+var client = new Discord.Client();
 
-const resp = require('./json/responses.json');
-const commands = require('./functions/commands.js');
-const token = require('./json/config.json').discord.token;
+var resp = require('./json/responses.json');
+var commands = require('./functions/commands.js');
+var token = require('./json/config.json').discord.token;
 require('./functions/eventLoader.js')(client);
 
 
-Client.bot.on('message', (msg) => {
+client.bot.on('message', (message) => {
 	if (message.author.bot) return;
-	if (msg.content.startsWith(Client.prefix)) {
-		args = msg.content.slice(Client.prefix.length).split(' ');
+	if (message.content.startsWith(client.prefix)) {
+		var args = message.content.slice(client.prefix.length).split(' ');
 	}
 });
 
 var reload = (message, cmd) => {
 	delete require.cache[require.resolve('./commands/' + cmd)];
 	try {
-		let cmdFile = require('./commands/' + cmd);
-	}.catch(err) {
+		var cmdFile = require('./commands/' + cmd);
+	} catch (err) {
 		message.channel.sendMessage(`Problem loading ${cmd}: ${err}`).then(
 			response = response.delete(1000).catch(error => console.log(error.stack))
 		).catch(error => console.log(error.stack));

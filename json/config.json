@@ -1,9 +1,9 @@
 {
   "sheet": {
-    "ranges": "Enhancement Guideline!A9:P356",
+    "ranges": "Enhancement Guideline!A9:P338",
     "majorDimension": "COLUMNS"
   },
   "discord": {
-    "prefix": "#"
+    "prefix": "!"
   }
 }
