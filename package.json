@@ -22,10 +22,12 @@
   "homepage": "https://github.com/staryg/faistackBot#readme",
   "dependencies": {
     "bufferutil": "^3.0.0",
+    "chalk": "^2.0.1",
     "discord.js": "^11.1.0",
     "google-auth-library": "^0.10.0",
     "googleapis": "^19.0.0",
     "libsodium-wrappers": "^0.5.1",
+    "moment": "^2.18.1",
     "opusscript": "0.0.3",
     "uws": "^0.14.5"
   }

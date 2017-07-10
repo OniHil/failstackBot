@@ -1,9 +1,11 @@
 {
   "sheet": {
+    "id": "1MqlUIzyNGH_37pXDZnvzFok4ligEec3170IwC4iAj-0",
     "ranges": "Enhancement Guideline!A9:P338",
     "majorDimension": "COLUMNS"
   },
   "discord": {
+    "token": "MjY5MTQyMDc3OTk5MTUzMTUy.DCvtFg.R0XhOkKvjRj30tN0hYhSCmqGeUQ",
     "prefix": "!"
   }
 }

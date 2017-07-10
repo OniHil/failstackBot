@@ -1,6 +1,9 @@
 {
   "startup": "Bot has started",
   "cmds": {
+    "help": {
+      "failstack": "test"
+    },
     "ping": "pong",
     "fs": [
       "For a ",
@@ -9,6 +12,7 @@
       " silver and you need ",
       ""
     ]
+
   },
   "help": {
     "ping": "pong",
