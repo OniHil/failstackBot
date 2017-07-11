@@ -1,4 +1,4 @@
-const config = require('../config.json');
+const config = require('../json/config.json');
 exports.run = (client, message, params) => {
 	if (!params[0]) {
 		const commandNames = Array.from(client.commands.keys());

@@ -1,11 +1,13 @@
 'use strict';
-var fs = require('fs');
-var Discord = require('discord.js');
+const fs = require('fs');
+const moment = require('moment');
+const chalk = require('chalk');
+const Discord = require('discord.js');
 var client = new Discord.Client();
 var resp = require('./json/responses.json');
 var token = require('./json/config.json')
 	.discord.token;
-require('./functions/eventLoader.js')(client);
+require('./util/eventLoader.js')(client);
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
@@ -13,14 +15,14 @@ client.aliases = new Discord.Collection();
 fs.readdir('./commands/', (err, files) => {
 	if (err) console.error(err);
 	console.log(`Loading a total of ${files.length} commands.`);
-	files.forEach(f => {
+	for (var f of files) {
 		var props = require(`./commands/${f}`);
 		console.log(`Loading Command.`);
 		client.commands.set(props.help.name, props);
-		props.conf.aliases.forEach(alias => {
+		for (var alias of props.conf.aliases) {
 			client.aliases.set(alias, props.help.name);
-		});
-	});
+		}
+	}
 });
 
 client.reload = command => {
